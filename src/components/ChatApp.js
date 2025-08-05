@@ -6,7 +6,20 @@ const ChatApp = () => {
     {
       id: 1,
       type: 'bot',
-      content: "Hello! I'm your AI assistant. I can help you with booking cabs, setting reminders, playing music, and answering general questions. What would you like me to help you with today?",
+      content: `Hello! I'm your AI assistant. I can help you with a wide range of tasks including:
+
+🛫 **Travel & Booking** - Flight reservations, hotel bookings, train tickets
+🍕 **Food Orders** - Restaurant reservations, food delivery, meal planning
+🚗 **Transportation** - Cab bookings, ride sharing, travel arrangements
+📅 **Appointments** - Meeting scheduling, doctor visits, calendar management
+🎵 **Entertainment** - Music, movies, games, and media recommendations
+🛒 **Shopping** - Product search, online purchases, price comparisons
+⏰ **Reminders** - Alerts, notifications, task management
+ℹ️ **Information** - Weather, facts, general questions, research
+📋 **Calendar & Scheduling** - Event planning, time management
+📱 **Communication** - Messages, calls, emails, contact management
+
+What would you like me to help you with today?`,
       timestamp: new Date().toLocaleTimeString()
     }
   ]);
@@ -84,20 +97,12 @@ const ChatApp = () => {
 
   return (
     <div style={{minHeight: '100vh', backgroundColor: '#f9fafb', fontFamily: 'Arial, sans-serif'}}>
-      <div style={{backgroundColor: 'white', boxShadow: '0 1px 3px rgba(0,0,0,0.1)', borderBottom: '1px solid #e5e7eb'}}>
-        <div style={{maxWidth: '1024px', margin: '0 auto', padding: '16px', textAlign: 'center'}}>
-          <h1 style={{fontSize: '24px', fontWeight: 'bold', color: '#1f2937', margin: '0 0 8px 0'}}>QA the AI Challenge</h1>
-          <p style={{color: '#6b7280', margin: 0}}>Test the AI Assistant and evaluate its responses</p>
-        </div>
-      </div>
-
       <div style={{maxWidth: '1024px', margin: '0 auto', padding: '24px'}}>
         <div style={{backgroundColor: 'white', borderRadius: '8px', boxShadow: '0 1px 3px rgba(0,0,0,0.1)', border: '1px solid #e5e7eb', height: '600px', display: 'flex', flexDirection: 'column'}}>
           <div style={{padding: '16px', borderBottom: '1px solid #e5e7eb', backgroundColor: '#f9fafb', borderRadius: '8px 8px 0 0'}}>
             <h2 style={{fontWeight: '600', color: '#1f2937', margin: '0 0 4px 0'}}>AI Assistant Chat</h2>
             <p style={{fontSize: '14px', color: '#6b7280', margin: 0}}>Enter your prompts and observe the AI responses</p>
           </div>
-          
           <div style={{flex: 1, overflowY: 'auto', padding: '16px'}}>
             {messages.map((message) => (
               <div key={message.id} style={{display: 'flex', justifyContent: message.type === 'user' ? 'flex-end' : 'flex-start', marginBottom: '16px'}}>
@@ -119,7 +124,7 @@ const ChatApp = () => {
                     backgroundColor: message.type === 'user' ? '#3b82f6' : '#f3f4f6',
                     color: message.type === 'user' ? 'white' : '#1f2937'
                   }}>
-                    <p style={{fontSize: '14px', margin: '0 0 4px 0', whiteSpace: 'pre-wrap'}}>{message.content}</p>
+                    <p style={{fontSize: '14px', margin: '0 0 4px 0', whiteSpace: 'pre-wrap', textAlign: message.type === 'user' ? 'right' : 'left'}}>{message.content}</p>
                     <p style={{
                       fontSize: '12px', 
                       margin: 0,
