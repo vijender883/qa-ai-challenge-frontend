@@ -8,15 +8,15 @@ const ChatApp = () => {
       type: 'bot',
       content: `Hello! I'm your AI assistant. I can help you with a wide range of tasks including:
 
+ℹ️ **Information** - Weather, facts, general questions, research
 🛫 **Travel & Booking** - Flight reservations, hotel bookings, train tickets
-🍕 **Food Orders** - Restaurant reservations, food delivery, meal planning
-🚗 **Transportation** - Cab bookings, ride sharing, travel arrangements
 📅 **Appointments** - Meeting scheduling, doctor visits, calendar management
-🎵 **Entertainment** - Music, movies, games, and media recommendations
+🚗 **Transportation** - Cab bookings, ride sharing, travel arrangements
+📋 **Calendar & Scheduling** - Event planning, time management
 🛒 **Shopping** - Product search, online purchases, price comparisons
 ⏰ **Reminders** - Alerts, notifications, task management
-ℹ️ **Information** - Weather, facts, general questions, research
-📋 **Calendar & Scheduling** - Event planning, time management
+🎵 **Entertainment** - Music, movies, games, and media recommendations
+🍕 **Food Orders** - Restaurant reservations, food delivery, meal planning
 📱 **Communication** - Messages, calls, emails, contact management
 
 What would you like me to help you with today?`,
